@@ -6,8 +6,8 @@ var express = require( 'express' ),
 
 require( 'dotenv' ).config();
 
-var authkey = 'AUTHKEY' in process.env ? process.env.AUTHKEY : '';
-var base_url = 'BASE_URL' in process.env ? process.env.BASE_URL : 'https://api-free.deepl.com';
+var authkey = 'AUTHKEY' in process.env && process.env.AUTHKEY ? process.env.AUTHKEY : '';
+var base_url = 'BASE_URL' in process.env && process.env.BASE_URL ? process.env.BASE_URL : 'https://api-free.deepl.com';
 var axios = axiosBase.create({
   baseURL: base_url,
   headers: {
